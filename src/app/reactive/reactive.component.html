@@ -1,7 +1,7 @@
 <p>reactive works!</p>
 
 <form [formGroup]="reactiveform" (ngSubmit)="onSubmit()">
-
+<label>Employee Details</label>
     firstname<span style="color:red;">*</span><br>
     
     
@@ -22,6 +22,7 @@
     <button type="submit">Submit</button>
     <button (click)="Reset()">Reset</button>
    <div>
+    <label>Display Employee Details</label>
         <p>Firstname<strong>{{formdata.firstname}}</strong></p>
         <p>Lastname<strong>{{formdata.lastname}}</strong></p>
         <p>Email<strong>{{formdata.Email}}</strong></p>
