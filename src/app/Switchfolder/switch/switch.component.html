@@ -1,0 +1,15 @@
+<p>switch works!</p>
+<select (change)="selectchange($event)">
+    <option *ngFor="let x of items">{{x}}</option>
+</select>
+Small:
+<input type="radio" name="fontchange" (change)="changesize('s')">
+Big:
+<input type="radio" name="fontchange" (change)="changesize('b')">
+<div [ngSwitch]="itemchanged">
+<h2 *ngSwitchDefault [ngClass]="radiocolor" [ngClass]="defaultcolor">Please Select</h2>
+<h2 *ngSwitchCase="'Laptop'">Laptop</h2>
+<h2 *ngSwitchCase="'machine'">machine</h2>
+<h2 *ngSwitchCase="'car'">car</h2>
+<h2 *ngSwitchCase="'phone'">phone</h2>
+</div>

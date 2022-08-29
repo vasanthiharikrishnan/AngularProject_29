@@ -1,0 +1,20 @@
+<label><h2>Enter your Details</h2></label>
+<div [class]="classcolor">  
+
+First Name: <input type="text" #myfirstname [(ngModel)]="firstname" value="{{firstname}}"><div></div><p></p>
+Last Name: <input type="text" #mylastname value="{{Lastname}}"><div></div><p></p>
+Email: <input type="text" #myemail value="{{Emali}}"><div></div><p></p>
+Age: <input type="text" value="{{Age}}"><div></div><p></p>
+Gender: 
+Male:<input type="radio" name="Gender"> Female:<input type="radio" name="Gender"><div></div><p></p>
+Master's stream: <input type="text" value="{{masters}}"><div></div>
+
+</div>
+<div><p><button (click)="submit(myfirstname.value,mylastname.value,myemail.value)">Submit
+
+</button></p></div>
+<div *ngIf="isshow">
+    my firstname: <p></p>{{firstname}}<div>
+    my last name:<p></p>{{Lastname}}</div>
+   <div> myemail:<p></p>{{Emali}}</div>
+</div>

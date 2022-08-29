@@ -1,0 +1,25 @@
+<form #myForm="ngForm" (ngSubmit)="onsubmit(myForm)">
+
+firstname<span style="color:red;">*</span><br>
+
+<input type="text" name="fname" [(ngModel)]="firname" required #fname12="ngModel">
+<div style="color:red ;" *ngIf="!fname12.valid">first name is mandetory</div><br><br>
+Lastname<input type="password" name="lname" ngModel ><br><br>
+Email<input type="text" name="Email" ngModel email #email1="ngModel">
+<div style="color:red ;" *ngIf="!email1.valid">Enter proper email</div><br><br>
+Mob<input type="text" name="Mob" ngModel ><br><br>
+Gender
+<select name="gen" ngModel>
+    <option *ngFor="let item of Gender" value="{{item}}" >{{item}}</option>
+</select><br><br>
+<button [disabled]="!myForm.valid" type="submit">Submit</button>
+<div>
+    <p>Firstname<strong>{{formdata.firstname}}</strong></p>
+    <p>Lastname<strong>{{formdata.lastname}}</strong></p>
+    <p>Email<strong>{{formdata.email}}</strong></p>
+    <p>Gender<strong>{{formdata.gender}}</strong></p>
+    <p>Mobile number<strong>{{formdata.mob}}</strong></p>
+</div>
+<!--<div>display</div>
+<div>{{myForm.value|json}}</div>
+</form>-->

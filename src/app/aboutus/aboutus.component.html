@@ -1,0 +1,45 @@
+<p>aboutus works!</p>
+<h1>About us page</h1>
+
+<h1>My name is {{myname}}</h1>
+<!--
+<h1>intertpolation</h1>
+<input type="text" value="{{myname}}">
+<input type="text" [(ngModel)]="myname">
+<button (click)="message()">click</button>
+<button (click)="showimage()">Show image </button>
+<button (click)="Hideimage()">Hide Image</button>
+<img src="{{imagepath}}" *ngIf="isbool" height="100">
+
+
+<h1>Property bunding</h1>
+
+
+<img [src]="imagepath" height="300">
+<input type="text" [value]="myname">-->
+<div *ngIf="true"> i am from div first</div>
+<div [hidden]="isbool">i am fro  div second</div>
+
+<div class="{{cssclass1}}"> i am 1st class</div>
+<div [class]="cssclass2">i am from 2nd class</div>
+Red:<input type="radio" name="colorname" value="red" (change)="changecolor('red')">
+Blue:<input type="radio" name="colorname" value="blue" (change)="changecolor('blue')">
+
+<div [class]="changeclass">Changing color</div>
+<select>
+<option value="red" (select)="colorselect('$red')">Red
+    
+</option>
+<option value="blue"  (select)="colorselect('$blue')">BLUE</option>
+</select>
+<div [class]="selectclass">select div</div>
+
+
+<input type="text" value="my name" (click)="myclick($event)">
+
+<input type="text" [(ngModel)]="valuename" >
+<div>{{valuename}}</div>
+
+<div *ngIf="4>2"> hai</div>
+
+<div *ngIf="true">vasanthi</div>

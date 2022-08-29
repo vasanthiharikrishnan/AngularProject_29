@@ -1,0 +1,40 @@
+<p>directive works!</p>
+<div *ngIf="isShow then thenblock else show ">hai</div>
+<button (click)="Myclick()">Show</button>
+<div *ngIf="justcheck()"> i am div</div>
+
+<ng-template #thenblock>
+    i am coming from then
+</ng-template>
+<ng-template #show>
+    i am from else block
+</ng-template>
+<select>
+    <option *ngFor="let x of lstgender">{{x}}</option>
+</select><div>
+    <table border="2" style="color:blueviolet">
+<tr>
+    <div>
+        <div>
+            <td>index</td>
+             <td>id</td>
+             <td>name</td>
+             <td>salary</td>
+             <td>Gender</td>
+             <td>dob</td>
+</div>
+</div>
+</tr>
+<tr *ngFor="let item of student;index as i">
+    <div *ngIf="item.sal>29000">
+          <td>{{i+1}}</td>
+           <td>{{item.ID}}</td>
+           <td>{{item.name | cutompipe:item.Gender}}</td>
+           <td>{{item.sal | currency:'USD'}}</td>
+           <td>{{item.Gender}}</td>
+            <td>{{item.dob| date:'yyyy-dd-MM'}}</td>
+    </div>
+</tr>
+
+    </table>
+</div>
