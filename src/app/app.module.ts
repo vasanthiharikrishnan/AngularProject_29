@@ -17,6 +17,7 @@ import { ReactiveComponent } from './reactive/reactive.component';
 import { GeneralApiService } from './Services/general-api.service';
 import {HttpClientModule} from '@angular/common/http';
 import { UserlistComponent } from './userlist/userlist.component';
+import { TestComponent } from './test/test.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { UserlistComponent } from './userlist/userlist.component';
     PagenotfoundComponent,
     TemplateComponent,
     ReactiveComponent,
-    UserlistComponent
+    UserlistComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
